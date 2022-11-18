@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    font-family: 'Fredoka One', cursive;
+    background-image: linear-gradient(to right,#e22865,#37adcd);
+    color: white;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.nav{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.nav h2{
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+
+#input{
+    width: 80%;
+    border: 1px solid lightgray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px ;
+    padding: 8px;
+}
+
+.user-input button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 8px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.user-input button:hover{
+    background-color: greenyellow;
+    color: white;
+}
+
+#to-do-list{
+    margin-top: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 16px;
+    background-color: white;
+    color: black;
+    margin-bottom: 2%;
+}
