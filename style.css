@@ -70,6 +70,16 @@ body,html{
     margin-bottom: 2%;
 }
 
+#value{
+    margin: 1%;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: fredoka one;
+}
+
+
+
 @media only screen and (max-width:600px){
     #input{
        border-radius: 0px;

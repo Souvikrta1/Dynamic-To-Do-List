@@ -2,6 +2,11 @@ const toDoItems = document.getElementById('to-do-list');
 const input = document.getElementById('input');
 const binIcon = document.getElementById('bin');
 const btn = document.getElementById('btn');
+const type = document.getElementById('value');
+const show = document.getElementById('Show');
+
+const todoShow = localStorage.getItem("todoData");
+
 
 input.addEventListener('keydown',(event)=>{
     if(event.key === 'Enter'){ 
@@ -21,9 +26,10 @@ function addItem(){
 
     divParent.className = 'item';
     divChild1.innerText = input.value;
+    divChild1.className = 'todo-data'
 
     binIcon.className = 'fa-solid fa-trash';
-    binIcon.style.color = 'darkgray';
+    binIcon.style.color = 'black';
     binIcon.addEventListener('click',()=>{
         divParent.remove();
     })
@@ -34,10 +40,15 @@ function addItem(){
     divParent.appendChild(divChild2);
 
     toDoItems.appendChild(divParent);
-    
-    divChild1.addEventListener('click',()=>{
-        divChild1.style.textDecoration = 'line-through';
-        divParent.style.background = 'lightgray'
-    })
-}
 
+    let select = type;
+    if(select.value == 'High'){
+        divParent.style.backgroundColor = 'rgb(210, 53, 53)';
+    }
+    if(select.value == 'Medium'){
+        divParent.style.backgroundColor = 'yellow';
+    }
+    if(select.value == 'Low'){
+        divParent.style.backgroundColor = 'greenyellow';
+    }
+}
